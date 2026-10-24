@@ -1,3 +1,7 @@
 minimumReleaseAge: 11520
 minimumReleaseAgeExclude:
   - "@every-app/*"
+
+# Security floor (cve.now): CVE-2026-109869, CVE-2026-19534, CVE-2026-13697 and older undici advisories.
+overrides:
+  undici: "^7.30.1"
