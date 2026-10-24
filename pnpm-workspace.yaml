@@ -46,4 +46,9 @@ overrides:
   # GHSA-v3rj-xjv7-4jmq — waiting on knip
   smol-toml: "^1.6.1"
   # 7 advisories incl. GHSA-vmh5-mc38-953g — waiting on cheerio + miniflare
-  undici: "^7.28.0"
+  # CVE-2026-104850, CVE-2026-111767 — waiting on agents (pins 1.29.0)
+  "@modelcontextprotocol/sdk": "^1.32.1"
+  # CVE-2026-104845/104846 — waiting on @tanstack/start
+  seroval: "^1.6.3"
+  # CVE-2026-109869, CVE-2026-19534, CVE-2026-13697 — waiting on cheerio + miniflare
+  undici: "^7.30.1"
