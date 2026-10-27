@@ -25,12 +25,15 @@ auditConfig:
 # To prune once a parent catches up: delete the line, run `pnpm install`, and
 # keep it deleted if `pnpm audit` stays clean.
 overrides:
+  # CVE-2026-8769 — waiting on @cloudflare/think (pins @ai-sdk/anthropic + openai on 4.0.30)
+  "@ai-sdk/provider-utils": "^4.0.61"
   # GHSA-4x5r-pxfx-6jf8 — waiting on @tanstack/devtools-vite
   "@babel/core": "^7.29.6"
   # GHSA-737v-mqg7-c878 — waiting on better-auth
   defu: "^6.1.5"
   # 13 advisories incl. GHSA-x4vx-rjvf-j5p4, GHSA-gvmj-g25r-r7wr — waiting on posthog-js
-  dompurify: "^3.4.11"
+  # GHSA-c6gr-qvv4-5v3f, CVE-2026-116803/116804 — fixed in 3.4.17
+  dompurify: "^3.4.17"
   # GHSA-hmw2-7cc7-3qxx — waiting on cloudflare
   form-data: "^4.0.6"
   # 9 advisories incl. GHSA-88fw-hqm2-52qc (CORS) — waiting on @modelcontextprotocol/sdk
